@@ -1,5 +1,4 @@
-
-**## 🤖 AutoGem MCP**
+## 🤖 AutoGem MCP
 
 A lightweight, local **agentic automation framework** powered by **Gemini API (free key)**, **Python**, and an **MCP-style tool interface**. It uses a **ReAct loop** (Think → Act → Observe → Repeat) to plan actions, execute local tools, and complete tasks autonomously.
 <BLOCKQUOTE><P>Perfect for quick local workflows, coding helpers, and file automation. Runs entirely on your machine with no external dependencies beyond Gemini.</P></BLOCKQUOTE>
@@ -53,17 +52,15 @@ When you run the agent with a goal, you’ll see:
 
 ## 🚀 Getting Started
 
-# 1. Clone the Repository
+### 1. Clone the Repository
 
-# 2.  Create Virtual Environment & Install Dependencies
+### 2.  Create Virtual Environment & Install Dependencies
 
 1. python -m venv .venv
 2. source .venv/bin/activate   # Windows: .venv\\Scripts\\activate
 3. pip install -r requirements.txt
 
-
-2) Create README
-# 3.  Configure Environment
+### 3.  Configure Environment
 1. Create a .env file:
 
 ---
@@ -83,30 +80,29 @@ auto-gem-mcp-python/
 
 ## 🏃 Usage Examples
 
-# 1) List Files and Summarize
+### 1) List Files and Summarize
 1. python agent.py --goal "List files in the current directory and write a summary into summary.txt."
 
-# 2) Create README
+### 2) Create README
 1. python agent.py --goal "Create a file named README.md with a short project description."
 
-# 3) Safe Shell Command
+### 3) Safe Shell Command
 1. Python agent.py --goal "Run 'echo Hello Pune' and save the output to hello.txt."
 
 ---
 
 ## 🛡️ Safety & Best Practices
 
-# Restrict shell commands via SAFE_COMMANDS in .env.
-# Use relative paths for file operations.
-# Limit steps in agent.py to prevent infinite loops.
-# Validate tool calls for security.
+- Restrict shell commands via SAFE_COMMANDS in .env.
+- Use relative paths for file operations.
+- Limit steps in agent.py to prevent infinite loops.
+- Validate tool calls for security.
 
 ---
 
-
 ## 🔧 Extending Tools
 
-# Add new tools in mcp_tools.py:
+### Add new tools in mcp_tools.py:
 
 @tool("append_file")
 def append_file(args: Dict[str, Any]) -> Dict[str, Any]:
@@ -150,6 +146,7 @@ def append_file(args: Dict[str, Any]) -> Dict[str, Any]:
 </p>
 
 ---
+
 
 
 
